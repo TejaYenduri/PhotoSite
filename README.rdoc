@@ -9,7 +9,7 @@ Things you may want to cover:
 
 * IDE - rubymine
 
-
+Refer document "Documentation R1" to see how the application works.
 
 
 Please feel free to use a different markup language if you do not plan to run
