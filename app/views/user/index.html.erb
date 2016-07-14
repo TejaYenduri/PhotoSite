@@ -1,0 +1,22 @@
+<html>
+<h1> Photo Site User List </h1>
+<body>
+<p>There are 6 users </p>
+<table>
+  <tr> <td>User</td>
+    <td>First</td>
+    <td>Last</td></tr>
+  <% for user in @users_all %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= link_to user.first_name, :controller =>"photo", :action => "index", :id=> user.id%></td>
+
+        <td><%= user.last_name %></td>
+      </tr>
+  <% end %>
+</table>
+
+</body>
+
+
+</html>

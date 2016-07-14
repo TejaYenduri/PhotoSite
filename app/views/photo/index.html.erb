@@ -1,0 +1,22 @@
+<h1> Photos of <%= @user.first_name%>  <%= @user.last_name %></h1> </br>
+<% for photo in @photos %>
+
+    <%= image_tag photo.file_name %>
+    </br>
+    <li>
+      <b>Created On : <%= photo.date_time %></b>
+    </li>
+    </br><b>Comments</b></br>
+    <% for comment in photo.comments %>
+        <li>
+          <%= comment.date_time %> &nbsp
+          <%= link_to (comment.user.first_name), :controller => 'photo', :action => 'index', :id => comment.user_id %>
+          <%= comment.user.last_name %>
+          &nbsp &nbsp <%= comment.comment %>
+        </li>
+    <% end %>
+    </li>
+    </ul>
+    </br></br>
+<% end %>
+
